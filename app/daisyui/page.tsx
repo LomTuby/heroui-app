@@ -1,153 +1,148 @@
-import Link from "next/link";
-import { Badge, Button, Card, Checkbox, Switch } from "@heroui/react";
+import Navigation from "@/app/components/Navigation";
+import { Button, Card, Checkbox, Switch } from "@heroui/react";
 
 export default function DaisyuiPage() {
   return (
     <main className="comparison-shell daisyui-style comparison-surface">
-      <section className="mx-auto grid min-h-screen w-full max-w-7xl gap-6 px-4 py-8 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-8">
-        <div className="grid gap-6 lg:sticky lg:top-8 lg:h-fit">
-          <Card className="comparison-card rounded-[1.65rem]">
-            <Card.Content className="flex items-center justify-between gap-4 p-4">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-fuchsia-500 to-amber-300" />
-                <div>
-                  <p className="text-sm font-semibold">daisyShop</p>
-                  <p className="text-xs text-muted">Playful commerce UI</p>
-                </div>
-              </div>
-              <div className="hidden gap-3 md:flex">
-                <Link href="/" className="text-sm font-medium text-muted">
-                  Compare
-                </Link>
-                <span className="text-sm font-medium text-muted">Browse</span>
-                <span className="text-sm font-medium text-muted">Cart</span>
-              </div>
-            </Card.Content>
-          </Card>
-
-          <Card className="comparison-card overflow-hidden rounded-[1.65rem] p-1">
-            <div className="rounded-[1.45rem] bg-gradient-to-br from-fuchsia-500 via-pink-500 to-amber-300 p-6 text-white shadow-2xl shadow-pink-500/20">
-              <Link href="/" className="comparison-pill w-fit border-white/20 bg-white/15 text-white">
-                ← Back to comparison
-              </Link>
-              <div className="mt-8 space-y-4">
+      <section className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8">
+        <header className="comparison-card overflow-hidden rounded-[1.65rem] p-1">
+          <div className="rounded-[1.45rem] bg-gradient-to-br from-fuchsia-500 via-pink-500 to-amber-300 px-6 py-8 text-white shadow-2xl shadow-pink-500/20">
+            <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+              <div className="max-w-2xl space-y-4">
                 <p className="hero-eyebrow text-white/80">daisyUI</p>
-                <h1 className="hero-title text-4xl font-semibold tracking-tight sm:text-6xl">
-                  Friendly, playful, and a little bit loud.
+                <h1 className="hero-title text-4xl font-semibold tracking-tight sm:text-5xl">
+                  Friendly, playful, and loud.
                 </h1>
                 <p className="max-w-xl text-sm leading-7 text-white/85 sm:text-base">
-                  Rounded shapes, bright color, and a happy visual language make this feel
-                  approachable and fast to scan.
+                  Vibrant colors and organic shapes make this UI feel approachable,
+                  energetic, and fun to interact with.
                 </p>
               </div>
-              <div className="mt-8 flex flex-wrap gap-2">
-                <Badge content="fun" color="warning" />
-                <Badge content="rounded" color="accent" />
-                <Badge content="soft" color="success" />
-              </div>
+              <Navigation />
             </div>
-          </Card>
+          </div>
+        </header>
 
-          <Card className="comparison-card rounded-[1.65rem]">
-            <Card.Header className="space-y-2">
-              <p className="hero-eyebrow">Theme switcher</p>
-              <h2 className="hero-title text-2xl font-semibold">One-click personality</h2>
-            </Card.Header>
-            <Card.Content className="grid gap-3 p-6">
-              <div className="comparison-pill justify-between">
-                <span className="text-sm font-medium">Default</span>
-                <Badge content="active" color="accent" />
-              </div>
-              <div className="comparison-pill justify-between">
-                <span className="text-sm font-medium">Dark</span>
-                <Badge content="on" color="warning" />
-              </div>
-              <div className="comparison-pill justify-between">
-                <span className="text-sm font-medium">Halloween</span>
-                <Badge content="seasonal" color="success" />
-              </div>
-            </Card.Content>
-          </Card>
-        </div>
+        <div className="grid gap-6 xl:grid-cols-[0.8fr_1.2fr]">
+          <div className="space-y-6">
+            <Card className="comparison-card rounded-[1.65rem] overflow-hidden">
+               <Card.Header className="bg-rose-50 border-b border-rose-100 px-6 py-4">
+                 <h3 className="font-bold text-rose-700">Shelf Drawer</h3>
+               </Card.Header>
+               <Card.Content className="p-0">
+                 <div className="flex">
+                    <div className="w-16 bg-rose-100/50 border-r border-rose-100 flex flex-col items-center py-6 gap-6">
+                       <div className="h-8 w-8 rounded-xl bg-rose-400" />
+                       <div className="h-8 w-8 rounded-xl bg-rose-200" />
+                       <div className="h-8 w-8 rounded-xl bg-rose-200" />
+                    </div>
+                    <div className="flex-1 p-6 space-y-4 text-sm">
+                       <p className="font-semibold text-slate-600 uppercase tracking-widest text-[10px]">Categories</p>
+                       <div className="space-y-2">
+                          <div className="px-4 py-2 bg-rose-500 text-white rounded-xl font-medium cursor-pointer shadow-lg shadow-rose-500/30">New Arrivals</div>
+                          <div className="px-4 py-2 hover:bg-rose-50 rounded-xl font-medium cursor-pointer transition-colors">Trending</div>
+                          <div className="px-4 py-2 hover:bg-rose-50 rounded-xl font-medium cursor-pointer transition-colors">Summer Sale</div>
+                       </div>
+                    </div>
+                 </div>
+               </Card.Content>
+            </Card>
 
-        <div className="grid gap-6">
-          <Card className="comparison-card rounded-[1.65rem] overflow-hidden">
-            <div className="grid gap-0 md:grid-cols-[0.82fr_1.18fr]">
-              <div className="bg-white p-6">
-                <p className="hero-eyebrow">Drawer</p>
-                <h3 className="hero-title text-xl font-semibold">Category rail</h3>
-                <div className="mt-4 grid gap-2 text-sm text-muted">
-                  <span>New arrivals</span>
-                  <span>Trending</span>
-                  <span>Sale</span>
-                  <span>Accessories</span>
-                </div>
-              </div>
-              <div className="bg-rose-50 p-6">
-                <p className="hero-eyebrow">Menu</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  <Badge content="Home" color="accent" />
-                  <Badge content="Shop" color="warning" />
-                  <Badge content="Deals" color="success" />
-                  <Badge content="New" color="accent" />
-                </div>
-                <p className="mt-4 text-sm leading-6 text-slate-700">
-                  This feels more like a friendly storefront than an internal tool, which
-                  is the key daisyUI contrast.
-                </p>
-              </div>
-            </div>
-          </Card>
+            <Card className="comparison-card rounded-[1.65rem] p-6 space-y-6">
+               <h3 className="font-bold text-lg">Vibrant Buttons</h3>
+               <div className="flex flex-wrap gap-3">
+                  <Button className="bg-indigo-500 text-white rounded-2xl shadow-lg shadow-indigo-500/40">Primary</Button>
+                  <Button className="bg-emerald-500 text-white rounded-2xl shadow-lg shadow-emerald-500/40">Success</Button>
+                  <Button className="bg-amber-500 text-white rounded-2xl shadow-lg shadow-amber-500/40">Warning</Button>
+                  <Button className="bg-rose-500 text-white rounded-2xl shadow-lg shadow-rose-500/40">Error</Button>
+               </div>
+               <div className="flex flex-wrap gap-3">
+                  <Button variant="outline" className="border-2 border-indigo-500 text-indigo-600 rounded-2xl hover:bg-indigo-50">Outline</Button>
+                  <Button variant="ghost" className="bg-indigo-50 text-indigo-600 rounded-2xl">Ghost</Button>
+               </div>
+            </Card>
+          </div>
 
-          <Card className="comparison-card rounded-[1.65rem]">
-            <Card.Header className="space-y-2">
-              <p className="hero-eyebrow">Stats</p>
-              <h2 className="hero-title text-2xl font-semibold">Card grid with big personality</h2>
-            </Card.Header>
-            <Card.Content className="grid gap-4 p-6 sm:grid-cols-3">
-              <div className="rounded-[1.25rem] bg-white p-4 shadow-sm">
-                <p className="text-sm text-muted">Visitors</p>
-                <strong className="mt-2 block text-3xl">24.5k</strong>
-              </div>
-              <div className="rounded-[1.25rem] bg-white p-4 shadow-sm">
-                <p className="text-sm text-muted">Orders</p>
-                <strong className="mt-2 block text-3xl">1,284</strong>
-              </div>
-              <div className="rounded-[1.25rem] bg-white p-4 shadow-sm">
-                <p className="text-sm text-muted">Conversion</p>
-                <strong className="mt-2 block text-3xl">8.1%</strong>
-              </div>
-            </Card.Content>
-          </Card>
-
-          <Card className="comparison-card rounded-[1.65rem] overflow-hidden">
-            <div className="grid gap-0 md:grid-cols-[0.95fr_1.05fr]">
-              <div className="bg-rose-100 p-6">
-                <p className="hero-eyebrow">Actions</p>
-                <h3 className="hero-title text-xl font-semibold">Fast primary flow</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-700">
-                  Big buttons and strong color blocks make the important thing obvious.
-                </p>
-                <div className="mt-5 flex flex-wrap gap-3">
-                  <Button>Join now</Button>
-                  <Button variant="outline">Maybe later</Button>
-                </div>
-              </div>
-              <div className="bg-white p-6">
-                <p className="hero-eyebrow">Toggles</p>
-                <div className="mt-4 grid gap-4">
-                  <div className="comparison-pill justify-between">
-                    <span className="text-sm font-medium">Email updates</span>
-                    <Switch defaultSelected />
+          <div className="space-y-6">
+            <Card className="comparison-card rounded-[1.65rem] p-8">
+               <h3 className="font-bold text-2xl mb-8">Checkout Flow</h3>
+               <div className="space-y-10">
+                  {/* Progress Bar */}
+                  <div className="relative">
+                    <div className="absolute top-1/2 left-0 w-full h-1 bg-slate-100 -translate-y-1/2" />
+                    <div className="absolute top-1/2 left-0 w-2/3 h-1 bg-indigo-500 -translate-y-1/2" />
+                    <div className="relative flex justify-between">
+                       <div className="h-10 w-10 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold ring-8 ring-white shadow-xl shadow-indigo-500/20">1</div>
+                       <div className="h-10 w-10 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold ring-8 ring-white shadow-xl shadow-indigo-500/20">2</div>
+                       <div className="h-10 w-10 rounded-full bg-white border-4 border-slate-100 text-slate-300 flex items-center justify-center font-bold ring-8 ring-white">3</div>
+                    </div>
+                    <div className="flex justify-between mt-4 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                       <span className="text-indigo-600">Cart</span>
+                       <span className="text-indigo-600">Shipping</span>
+                       <span>Payment</span>
+                    </div>
                   </div>
-                  <div className="comparison-pill justify-between">
-                    <span className="text-sm font-medium">Beta access</span>
-                    <Checkbox defaultSelected />
+
+                  <div className="grid gap-6 sm:grid-cols-2">
+                     <div className="space-y-2">
+                        <label className="text-sm font-bold text-slate-600">Shipping Method</label>
+                        <div className="p-4 rounded-[1.25rem] border-2 border-indigo-500 bg-indigo-50/50 flex justify-between items-center">
+                           <div>
+                              <p className="font-bold">Express Delivery</p>
+                              <p className="text-xs text-indigo-600">1-2 business days</p>
+                           </div>
+                           <div className="h-6 w-6 rounded-full border-4 border-indigo-500 bg-white" />
+                        </div>
+                        <div className="p-4 rounded-[1.25rem] border-2 border-slate-100 hover:border-slate-200 transition-colors flex justify-between items-center cursor-pointer">
+                           <div>
+                              <p className="font-bold">Standard Ground</p>
+                              <p className="text-xs text-slate-400">3-5 business days</p>
+                           </div>
+                           <div className="h-6 w-6 rounded-full border-2 border-slate-200 bg-white" />
+                        </div>
+                     </div>
+
+                     <div className="space-y-4">
+                        <div className="flex justify-between items-center">
+                           <span className="font-bold text-slate-600">Gift wrap</span>
+                           <Switch defaultSelected />
+                        </div>
+                        <div className="flex justify-between items-center">
+                           <span className="font-bold text-slate-600">Send as anonymous</span>
+                           <Checkbox />
+                        </div>
+                        <div className="pt-4 mt-4 border-t border-slate-100">
+                           <div className="flex justify-between font-bold text-xl mb-4">
+                              <span>Total</span>
+                              <span>$158.00</span>
+                           </div>
+                           <Button className="w-full h-14 bg-indigo-500 text-white rounded-2xl text-lg font-bold shadow-xl shadow-indigo-500/30 hover:scale-[1.02] transition-transform">
+                              Continue to Payment
+                           </Button>
+                        </div>
+                     </div>
                   </div>
-                </div>
-              </div>
+               </div>
+            </Card>
+
+            <div className="grid gap-6 sm:grid-cols-3">
+               <Card className="comparison-card rounded-[1.65rem] p-6 bg-gradient-to-br from-fuchsia-500 to-pink-500 text-white">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-white/70">Promo</p>
+                  <p className="text-3xl font-bold mt-2">20% OFF</p>
+                  <p className="text-xs mt-1 text-white/80">Code: HELLO-UI</p>
+               </Card>
+               <Card className="comparison-card rounded-[1.65rem] p-6 bg-white">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Freebie</p>
+                  <p className="text-3xl font-bold mt-2">STICKERS</p>
+                  <p className="text-xs mt-1 text-slate-400">With every order</p>
+               </Card>
+               <Card className="comparison-card rounded-[1.65rem] p-6 bg-indigo-600 text-white">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-indigo-200">Bonus</p>
+                  <p className="text-3xl font-bold mt-2">POINTS</p>
+                  <p className="text-xs mt-1 text-indigo-200">Earn 2x rewards</p>
+               </Card>
             </div>
-          </Card>
+          </div>
         </div>
       </section>
     </main>

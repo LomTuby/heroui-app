@@ -79,7 +79,7 @@
   font-family: var(--font-sans);
 }
 
-.shadcn-style .comparison-shell {
+.shadcn-style.comparison-shell {
   background:
     radial-gradient(circle at top left, rgba(15, 23, 42, 0.08), transparent 32%),
     linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
@@ -105,7 +105,7 @@
   --radius: 1rem;
 }
 
-.daisyui-style .comparison-shell {
+.daisyui-style.comparison-shell {
   background:
     radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.16), transparent 28%),
     radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.16), transparent 24%),
@@ -134,7 +134,7 @@
   --radius: 1.35rem;
 }
 
-.magic-style .comparison-shell {
+.magic-style.comparison-shell {
   background:
     radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.24), transparent 20%),
     radial-gradient(circle at 85% 10%, rgba(59, 130, 246, 0.22), transparent 18%),
@@ -161,6 +161,21 @@
 
 .magic-style .hero-title {
   text-shadow: 0 0 36px rgba(139, 92, 246, 0.18);
+}
+
+/* Custom-inspired: bold, high-contrast, bespoke */
+.custom-style {
+  --accent: #f97316;
+  --surface: #ffffff;
+  --surface-foreground: #0f172a;
+  --background: #fffaf5;
+  --border-subtle: #fed7aa;
+}
+
+.custom-style.comparison-shell {
+  background:
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.05), transparent 40%),
+    linear-gradient(180deg, #fffaf5 0%, #ffffff 100%);
 }
 
 /* Dark theme variables */
