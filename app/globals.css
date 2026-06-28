@@ -79,7 +79,7 @@
   font-family: var(--font-sans);
 }
 
-.shadcn-style .comparison-shell {
+.shadcn-style.comparison-shell {
   background:
     radial-gradient(circle at top left, rgba(15, 23, 42, 0.08), transparent 32%),
     linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
@@ -105,7 +105,7 @@
   --radius: 1rem;
 }
 
-.daisyui-style .comparison-shell {
+.daisyui-style.comparison-shell {
   background:
     radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.16), transparent 28%),
     radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.16), transparent 24%),
@@ -134,7 +134,7 @@
   --radius: 1.35rem;
 }
 
-.magic-style .comparison-shell {
+.magic-style.comparison-shell {
   background:
     radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.24), transparent 20%),
     radial-gradient(circle at 85% 10%, rgba(59, 130, 246, 0.22), transparent 18%),
@@ -161,6 +161,67 @@
 
 .magic-style .hero-title {
   text-shadow: 0 0 36px rgba(139, 92, 246, 0.18);
+}
+
+/* Custom-inspired: bold, high-contrast, bespoke */
+.custom-style {
+  --accent: #f97316;
+  --surface: #ffffff;
+  --surface-foreground: #0f172a;
+  --background: #fffaf5;
+  --border-subtle: #fed7aa;
+}
+
+.custom-style.comparison-shell {
+  background:
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.05), transparent 40%),
+    linear-gradient(180deg, #fffaf5 0%, #ffffff 100%);
+}
+
+/* Retro-inspired: neon, synthwave, 80s miami */
+.retro-style {
+  --accent: #ff00ff;
+  --secondary: #00ffff;
+  --surface: #2d005d;
+  --surface-foreground: #ffffff;
+  --background: #050110;
+  --border-subtle: rgba(255, 0, 255, 0.3);
+}
+
+.retro-style.comparison-shell {
+  background:
+    linear-gradient(to bottom, rgba(5, 1, 16, 0.8), rgba(5, 1, 16, 0.95)),
+    linear-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(180deg, #2d005d 0%, #050110 100%);
+  background-size: 100% 100%, 40px 40px, 40px 40px, 100% 100%;
+}
+
+.retro-style .comparison-card {
+  background: rgba(45, 0, 93, 0.6);
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.4), inset 0 0 10px rgba(255, 0, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.retro-style .comparison-pill {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: #00ffff;
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff;
+}
+
+.retro-style .hero-title {
+  color: #ffffff;
+  text-shadow: 3px 3px 0px #ff00ff, 6px 6px 0px #00ffff;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.retro-style .hero-eyebrow {
+  color: #00ffff;
+  text-shadow: 0 0 5px #00ffff;
 }
 
 /* Dark theme variables */
