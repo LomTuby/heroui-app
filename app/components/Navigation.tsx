@@ -7,6 +7,7 @@ const tabs = [
   { name: "daisyUI", path: "/daisyui" },
   { name: "Magic UI", path: "/magicui" },
   { name: "Custom", path: "/custom" },
+  { name: "Retro", path: "/retro" },
 ];
 
 export default function Navigation() {

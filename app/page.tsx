@@ -38,6 +38,13 @@ const libraries = [
     color: "from-orange-500 to-amber-500",
     pill: "Bespoke",
   },
+  {
+    name: "Retro",
+    description: "Neon-soaked, synthwave-inspired 80s Miami aesthetic.",
+    path: "/retro",
+    color: "from-pink-500 via-purple-600 to-cyan-500",
+    pill: "Miami 80s",
+  },
 ];
 
 export default function Home() {
